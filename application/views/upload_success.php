@@ -12,7 +12,7 @@
 <?php endforeach; ?>
 </ul>
 
-<p><?php echo anchor('upload', 'Upload Another File!'); ?></p>
+<p><?php echo anchor('upload', '上传另一个!'); ?></p>
 
 </body>
 </html>
