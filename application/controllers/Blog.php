@@ -5,7 +5,7 @@
 class Blog extends CI_controller
 {
 	
-	function function index()
+	public function index()
 	{
 		echo "你好！";
 		# code...
