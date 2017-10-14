@@ -5,10 +5,9 @@
 class Blog extends CI_controller
 {
 	
-	public function index($y1, $y2)
+	public function index()
 	{
-		echo $y1;
-		echo $y2;
+		$this->load->view('blogview')
 		# code...
 	}
 }
