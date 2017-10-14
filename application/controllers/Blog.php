@@ -5,9 +5,10 @@
 class Blog extends CI_controller
 {
 	
-	public function index()
+	public function index($y1, $y2)
 	{
-		echo "你好！";
+		echo $y1;
+		echo $y2;
 		# code...
 	}
 }
