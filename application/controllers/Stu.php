@@ -15,4 +15,9 @@ class Stu extends CI_Controller {
         $this->load->view('stu/index', $data);
         $this->load->view('templates/footer');
     }
+    public function search()
+    {
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+    }
 }
