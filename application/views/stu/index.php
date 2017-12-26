@@ -1,2 +1,1 @@
-<h2><?php echo $title; ?></h2>
-你好
+        <a href="javascript:;" class="weui-btn weui-btn_primary">绿色按钮</a>
