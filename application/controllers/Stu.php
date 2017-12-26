@@ -10,6 +10,9 @@ class Stu extends CI_Controller {
     public function index()
     {
         $data['title'] = 'News archive';
+        
+        $this->load->helper('form');
+        $this->load->library('form_validation');
 
         $this->load->view('templates/header');
         $this->load->view('stu/index', $data);
