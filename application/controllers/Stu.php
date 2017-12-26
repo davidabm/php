@@ -11,6 +11,8 @@ class Stu extends CI_Controller {
     {
         $data['title'] = 'News archive';
 
+        $this->load->view('templates/header');
         $this->load->view('stu/index', $data);
+        $this->load->view('templates/footer');
     }
 }
