@@ -28,12 +28,12 @@ class Stu extends CI_Controller {
                 echo "ok-NO";
             } else {
                 # code...
-                echo "no-NO";
+                echo "学号错误";
             }
             
         } else {
             # code...
-            echo "no";
+            echo "姓名错误";
         }
         
     }
