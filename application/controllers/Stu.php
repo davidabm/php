@@ -25,7 +25,10 @@ class Stu extends CI_Controller {
         if ($user) {
             if ($user[0] -> number == $_POST['number']) {
                 # code...
-                echo "ok-NO";
+                $data = "正确"
+        $this->load->view('templates/header');
+        $this->load->view('stu/index', $data);
+        $this->load->view('templates/footer');
             } else {
                 # code...
                 echo "学号错误";
