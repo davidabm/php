@@ -25,10 +25,10 @@ class Stu extends CI_Controller {
         if ($user) {
             if ($user[0] -> number == $_POST['number']) {
                 # code...
-                echo "ok";
+                echo "ok-NO";
             } else {
                 # code...
-                echo "no";
+                echo "no-NO";
             }
             
         } else {
