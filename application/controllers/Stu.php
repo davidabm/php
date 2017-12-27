@@ -27,7 +27,7 @@ class Stu extends CI_Controller {
                 # code...
                 $data['error'] = "正确";
                 $arr = array('view' => '1');
-                $this -> user_test -> u_update($arr);
+                $this -> stu_model -> u_update($arr);
                 $this->load->view('templates/header');
                 $this->load->view('stu/show', $data);
                 $this->load->view('templates/footer');
