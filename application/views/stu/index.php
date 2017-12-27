@@ -28,9 +28,6 @@
 	<div class="weui-btn-area">
 	    <input class="weui-btn weui-btn_primary" type="submit" name="submit" href="javascript:" id="showTooltips" value="抽签">
 	</div>
-<<<<<<< HEAD
     </div>
-=======
 </form>
->>>>>>> 580662beb4cac6f8a7b795fc7dac032c6796128d
 </div>
