@@ -11,5 +11,9 @@ class Stu_model extends CI_Model {
 	    $query = $this -> db -> get('sty');
 	    return $query -> result(); //返回值
 	}
+	function u_update($number, $arr) {
+    $this -> db -> where('number', $number); //查找到此id的用户信息
+    $this -> db -> update('sty', $arr);//更新
+	}
 
 }
