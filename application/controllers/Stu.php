@@ -23,8 +23,14 @@ class Stu extends CI_Controller {
         $this -> load -> model('stu_model');
         $user = $this -> stu_model -> search_stu($_POST['name']);
         if ($user) {
-            echo "ok";
-            # code...
+            if ($user[0] -> number == $_POST['number']) {
+                # code...
+                echo "ok";
+            } else {
+                # code...
+                echo "no";
+            }
+            
         } else {
             # code...
             echo "no";
