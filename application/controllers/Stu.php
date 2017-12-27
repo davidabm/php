@@ -10,7 +10,7 @@ class Stu extends CI_Controller {
     public function index()
     {
         $data['title'] = 'News archive';
-        
+
         $this->load->helper('form');
         $this->load->library('form_validation');
 
@@ -20,7 +20,15 @@ class Stu extends CI_Controller {
     }
     public function search()
     {
-        $this->load->helper('form');
-        $this->load->library('form_validation');
+        $this -> load -> model('stu_model');
+        $user = $this -> stu_model -> search_stu($_POST['name']);
+        if ($user) {
+            echo "ok";
+            # code...
+        } else {
+            # code...
+            echo "no";
+        }
+        
     }
 }
