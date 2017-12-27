@@ -27,7 +27,7 @@ class Stu extends CI_Controller {
                 # code...
                 $data = "正确";
         $this->load->view('templates/header');
-        $this->load->view('stu/index', $data);
+        $this->load->view('stu/show', $data);
         $this->load->view('templates/footer');
             } else {
                 # code...
