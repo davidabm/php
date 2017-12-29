@@ -29,7 +29,7 @@ class Stu extends CI_Controller {
                 $arr = '1';
                 $this -> stu_model -> u_update($arr);
                 $this->load->view('templates/header');
-                $this->load->view('stu/show', $data);
+                $this->load->view('stu/show', $data ,$arr);
                 $this->load->view('templates/footer');
             } else {
                 # code...
