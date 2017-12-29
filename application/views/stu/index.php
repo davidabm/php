@@ -24,6 +24,11 @@
 	            <input class="weui-input" name="name" type="text" placeholder="请输入姓名"/>
 	        </div>
 	    </div>
+	    <div class="weui-cell">
+	        <div class="weui-cell__bd">
+	            <input class="weui-input" name="title" type="text" placeholder="名称"/>
+	        </div>
+	    </div>
 	</div>
 	<div class="weui-btn-area">
 	    <input class="weui-btn weui-btn_primary" type="submit" name="submit" href="javascript:" id="showTooltips" value="抽签">

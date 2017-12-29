@@ -21,13 +21,18 @@ class Stu extends CI_Controller {
     public function search()
     {
         $this -> load -> model('stu_model');
+
+        $this->form_validation->set_rules('title', 'Title', 'required');
+
         $user = $this -> stu_model -> search_stu($_POST['name']);
+        $title = $this -> stu_model -> search_stu($_POST['title']);
+
         if ($user) {
             if ($user[0] -> number == $_POST['number']) {
                 # code...
                 $data['error'] = "正确";
                 $arr = '1';
-                $this -> stu_model -> u_update($arr);
+                $this -> stu_model -> u_update();
                 $this->load->view('templates/header');
                 $this->load->view('stu/show', $data ,$arr);
                 $this->load->view('templates/footer');

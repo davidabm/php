@@ -11,9 +11,19 @@ class Stu_model extends CI_Model {
 	    $query = $this -> db -> get('sty');
 	    return $query -> result(); //返回值
 	}
-	function u_update($xuehao) {
-    $this -> db -> where('number', $xuehao); //查找到此id的用户信息
-    $this -> db -> update('sty', $arr);//更新
+	function u_update() {
+
+	    $this->load->helper('url');
+
+	    $slug = url_title($this->input->post('title'), 'dash', TRUE);
+
+	    $data = array(
+	        'title' => $this->input->post('title'),
+	        'view' => '1'
+	    );
+
+	    return $this->db->insert('sty', $data);
+
 	}
 
 }
