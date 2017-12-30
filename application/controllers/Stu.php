@@ -36,9 +36,10 @@ class Stu extends CI_Controller {
                 # code...
                 $data['error'] = "正确";
 
-                $data['stu_item'] = $this->stu_model->get_stu($number);
 
                 $this -> stu_model -> u_update();
+                
+                $data['stu_item'] = $this->stu_model->get_stu($number);
 
                 $this->load->view('templates/header');
                 $this->load->view('stu/show', $data);
