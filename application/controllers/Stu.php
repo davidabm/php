@@ -35,7 +35,7 @@ class Stu extends CI_Controller {
             if ($user[0] -> number == $_POST['number']) {
                 # code...
                 $data['error'] = "正确";
-                $data['stu_item'] = $this-> stu_model -> search_stu($user);
+                //$data['stu_item'] = $this-> stu_model -> search_stu($user);
                 $this -> stu_model -> u_update();
 
                 $this->load->view('templates/header');
