@@ -6,6 +6,7 @@ class Stu extends CI_Controller {
         parent::__construct();
         $this->load->helper('url_helper');
 
+        $this->load->model('stu_model');
         $this->load->library('form_validation');
     }
 
@@ -22,7 +23,6 @@ class Stu extends CI_Controller {
     }
     public function search()
     {
-        $this -> load -> model('stu_model');
 
         $this->form_validation->set_rules('title', 'Title', 'required');
 
@@ -37,7 +37,7 @@ class Stu extends CI_Controller {
                 $data['error'] = "正确";
 
                 $data['stu_item'] = $this->stu_model->get_stu($number);
-                
+
                 $this -> stu_model -> u_update();
 
                 $this->load->view('templates/header');
