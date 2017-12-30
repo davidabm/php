@@ -31,6 +31,12 @@ class Stu_model extends CI_Model {
 	public function get_stu($number = FALSE)
 	{
 		# code...
+		    if ($number === FALSE)
+		    {
+		        $query = $this->db->get('sty');
+		        return $query->result_array();
+		    }
+
 		$query = $this->db->get_where('sty', array('number' => $number));
     	return $query->row_array();
 	}
