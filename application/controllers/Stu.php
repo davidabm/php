@@ -39,7 +39,7 @@ class Stu extends CI_Controller {
 
                 $this -> stu_model -> u_update();
 
-                $data['stu'] = $this->stu_model->get_stu();
+                $data['stu_item'] = $this->stu_model->get_stu();
 
                 $this->load->view('templates/header');
                 $this->load->view('stu/show', $data);
