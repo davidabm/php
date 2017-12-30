@@ -15,14 +15,16 @@ class Stu_model extends CI_Model {
 
 	    $this->load->helper('url');
 
-	    $slug = url_title($this->input->post('title'), 'dash', TRUE);
+	    $number = $this->input->post('number');
+	    $name = $this->input->post('name');
 
 	    $data = array(
 	        'title' => $this->input->post('title'),
 	        'view' => '1'
 	    );
+	    $where = "name = $name AND number = $number"
 
-	    return $this->db->insert('sty', $data);
+	    return $this->db->update('sty', $data, $where);
 
 	}
 
