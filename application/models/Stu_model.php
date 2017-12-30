@@ -22,9 +22,10 @@ class Stu_model extends CI_Model {
 	        'title' => $this->input->post('title'),
 	        'view' => '1'
 	    );
-	    $where = "name = $name AND number = $number";
+	    
+	    $this->db->where('id', $number);
 
-	    return $this->db->update('sty', $data, $where);
+	    return $this->db->update('sty', $data);
 
 	}
 
