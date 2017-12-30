@@ -33,10 +33,9 @@ class Stu extends CI_Controller {
             if ($user[0] -> number == $_POST['number']) {
                 # code...
                 $data['error'] = "正确";
-                $arr = '1';
                 $this -> stu_model -> u_update();
                 $this->load->view('templates/header');
-                $this->load->view('stu/show', $data ,$arr);
+                $this->load->view('stu/show', $data);
                 $this->load->view('templates/footer');
             } else {
                 # code...
