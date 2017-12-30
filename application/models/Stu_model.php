@@ -23,7 +23,7 @@ class Stu_model extends CI_Model {
 	        'view' => '1'
 	    );
 	    
-	    $this->db->where('id', $number);
+	    $this->db->where('number', $number);
 
 	    return $this->db->update('sty', $data);
 
