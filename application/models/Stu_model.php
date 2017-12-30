@@ -28,16 +28,16 @@ class Stu_model extends CI_Model {
 	    return $this->db->update('sty', $data);
 
 	}
-	public function get_stu($name = FALSE)
+	public function get_stu($number = FALSE)
 	{
 		# code...
-		    if ($name === FALSE)
+		    if ($number === FALSE)
 		    {
 		        $query = $this->db->get('sty');
 		        return $query->result_array();
 		    }
 
-		$query = $this->db->get_where('sty', array('name' => $name));
+		$query = $this->db->get_where('sty', array('number' => $number));
     	return $query->row_array();
 	}
 
