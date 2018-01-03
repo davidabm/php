@@ -1,2 +1,2 @@
 <?php echo $error; ?>
-<?php echo $stu_item; ?>
+<?php echo $stu_item(); ?>
